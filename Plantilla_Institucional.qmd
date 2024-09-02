@@ -1,0 +1,430 @@
+---
+#title: "Título"
+#subtitle: "Subtítulo"
+#author: "Facultad - Departamento - Sede"
+
+format:
+  revealjs:
+    header-includes: |
+      <link rel="icon" type="image/png" sizes="32x32" href="img/Logotipo_UNAL.png">
+    code-overflow: wrap
+    code-line-numbers: false
+    title-slide-attributes:
+      data-autoappear: '{"h1":["animate__flipInX, slow"],
+      ".subtitle":{"animation":"animate__fadeInDown", "speed":"faster", 
+      "split":"letters", "delay":"20", "container-delay":"100"}}'
+      data-background-size: contain
+    center: true
+    theme: white
+    navigation-mode: vertical
+    transition: slide
+    background-transition: fade
+    controls-layout: bottom-right
+    chalkboard: false
+    menu: true
+    css: style.css
+    section-divs: false
+    link-external-newwindow: true
+    slide-number: true
+    appearance:
+      autoappear: true
+      autoelements: {"ul li": "animate__fadeInLeft"}
+      appearparents: false
+      
+    logo: img/logoUNAL_blanco.png
+    footer: |
+      *Facultad - Departamento <br> Sede*
+    footer-logo-link: "https://unal.edu.co/"
+    header: 
+    subtitle-as-header: false
+    #header-logo: img/logoUNAL_blanco.png
+    header-logo-link: "https://unal.edu.co/"
+
+revealjs-plugins:
+  - appearance
+  
+filters: 
+  - reveal-header
+---
+
+# {background-color="#68228B"}
+
+<img src="img/logoUNAL_blanco.png" alt="" style="width:40%; height:auto;">
+
+# 
+<h1>Título</h1>
+
+<h2>Subtítulo</h2>
+
+<h3>Facultad - Departamento - Sede<h3>
+
+# Primera parte {background-color="#68228B"}
+
+Navega hacia abajo $\downarrow$ y a la derecha $\rightarrow$
+
+## 
+Para que el fondo de la diapositiva cambie, incluye `{background-color="color"}`:
+
+``` markdown
+# Primera parte {background-color="#68228B"}
+```
+
+## Título
+
+### Subtítulo
+
+En Powerpoint puedes crear diapositivas con elementos que aparecen de forma automática y secuencial con efectos. Appearance es un complemento para Reveal.js que hace lo mismo.
+
+Appearance es fácil de configurar. Utiliza [Animate.css](https://animate.style) de Daniel Eden para las animaciones, con algunos cambios para permitir un estado no animado.
+
+![](img/1.jpg){.demoimg .animate__flipInX}
+
+# Ejemplos de las transiciones
+
+## Hagamos aparecer el texto
+
+* [Agregarlo a cualquier elemento de texto.]{.animate__bounceInLeft data-appear-parent="true"}
+* [Como elementos de lista o encabezados.]{.animate__bounceInLeft data-appear-parent="true"}
+* [Agrega algo de impacto.]{.animate__bounceInLeft data-appear-parent="true" }
+
+
+##
+### Haz que las lineas aparezcan por palabra {.animate__fadeInDown data-split="words" data-delay="200"}
+### [o...]{.animate__fadeInDown data-delay="600"} [por caracter]{.animate__fadeInDown .animate__faster data-split="letters" data-delay="75" data-container-delay="800"}
+
+
+## Hagamos aparecer las imágenes
+
+::: {.row}
+![](img/1.jpg){.demoimg .animate__flipInX}
+![](img/2.jpg){.demoimg .animate__flipInX}
+![](img/3.jpg){.demoimg .animate__flipInX}
+![](img/4.jpg){.demoimg .animate__flipInX}
+![](img/5.jpg){.demoimg .animate__flipInX}
+:::
+
+## Usa con fragmentos
+
+Dentro de fragmentos como este [(haz click en siguiente)]{.animate__fadeInDown .faster}:
+
+::: {.row .fragment}
+![](img/1.jpg){.demoimg .animate__fadeInDown}
+![](img/2.jpg){.demoimg .animate__fadeInDown}
+![](img/3.jpg){.demoimg .animate__fadeInDown}
+![](img/4.jpg){.demoimg .animate__fadeInDown}
+![](img/5.jpg){.demoimg .animate__fadeInDown}
+:::
+
+[O como un fragmento en sí mismo.]{.fragment .animate__fadeInDown}
+
+
+## Animaciones en Animate.css
+
+Appearance admite las animaciones de entrada estándar que ofrece [Animate.css](https://animate.style). Algunos ejemplos:
+
+* [.animate__backInDown]{.animate__backInDown data-appear-parent="true"}
+* [.animate__bounceInDown]{.animate__bounceInDown data-appear-parent="true" data-delay="1000"}
+* [.animate__fadeInLeft]{.animate__fadeInLeft data-appear-parent="true" data-delay="1000"}
+* [.animate__flipInX]{.animate__flipInX data-appear-parent="true" data-delay="1000"}
+* [.animate__rotateIn]{.animate__rotateIn data-appear-parent="true" data-delay="1000"}
+* [.animate__zoomInDown]{.animate__zoomInDown data-appear-parent="true" data-delay="1000"}
+* [.animate__jackInTheBox]{.animate__jackInTheBox data-appear-parent="true" data-delay="1000"}
+
+## Animaciones adicionales
+
+* [.animate__skidLeft]{.animate__skidLeft data-appear-parent="true"}
+* [.animate__skidLeftBig]{.animate__skidLeftBig data-appear-parent="true" data-delay="1000"}
+* [.animate__skidRight]{.animate__skidRight data-appear-parent="true" data-delay="1000"}
+* [.animate__skidRightBig]{.animate__skidRightBig data-appear-parent="true" data-delay="1000"}
+* [.animate__shrinkIn]{.animate__shrinkIn data-appear-parent="true" data-delay="1000"}
+* [.animate__shrinkInBig]{.animate__shrinkInBig data-appear-parent="true" data-delay="1000"}
+
+
+# Segunda parte {background-color="#68228B"}
+
+# Cambia el retraso, la velocidad y el inicio de las animaciones
+
+Puedes cambiar el retraso, la velocidad y el inicio de las animaciones fácilmente:
+
+## Cambia el retraso de la animación
+
+Usa `data-delay="*"` en cada elemento, donde el "*" es el retraso en microsegundos desde la aparición del elemento anterior.
+
+::: {.row}
+![](img/1.jpg){.demoimg .animate__fadeInDown data-delay="0"}
+![](img/2.jpg){.demoimg .animate__fadeInDown data-delay="200"}
+![](img/3.jpg){.demoimg .animate__fadeInDown data-delay="160"}
+![](img/4.jpg){.demoimg .animate__fadeInDown data-delay="120"}
+![](img/5.jpg){.animate__fadeInDown data-delay="80"}
+:::
+
+```markdown
+![](img/1.jpg){.animate__fadeInDown data-delay="0"}
+![](img/2.jpg){.animate__fadeInDown data-delay="200"}
+![](img/3.jpg){.animate__fadeInDown data-delay="160"}
+![](img/4.jpg){.animate__fadeInDown data-delay="120"}
+![](img/5.jpg){.animate__fadeInDown data-delay="80"}
+```
+
+## Cambia la velocidad de la animación
+
+Utilice las clases de velocidad de [Animate.css](https://animate.style) para cambiar la velocidad de la animación:
+
+::: {.row}
+::: {.col}
+slower ![](img/1.jpg){.demoimg .animate__bounceIn .animate__slower}
+:::
+::: {.col}
+slow ![](img/2.jpg){.demoimg .animate__bounceIn .animate__slow}
+:::
+::: {.col}
+&nbsp; ![](img/3.jpg){.demoimg .animate__bounceIn}
+:::
+::: {.col}
+fast ![](img/4.jpg){.demoimg .animate__bounceIn .animate__fast}
+:::
+::: {.col}
+faster ![](img/5.jpg){.demoimg .animate__bounceIn .animate__faster}
+:::
+:::
+
+
+```markdown
+![](img/1.jpg){.animate__bounceIn .animate__slower}
+![](img/2.jpg){.animate__bounceIn .animate__slow}
+![](img/3.jpg){.animate__bounceIn}
+![](img/4.jpg){.animate__bounceIn .animate__fast}
+![](img/5.jpg){.animate__bounceIn .animate__faster}
+```
+
+## Cambia la configuración de palabras o letras
+
+Para palabras y letras, simplemente configura la velocidad y el retraso como se describe arriba. Las partes más pequeñas heredarán estos ajustes. Configure un `data-container-delay="*"` para un retraso diferente para el contenedor, en comparación con el `delay = 300` estándar de las opciones.
+
+### [Dividir en palabras]{.animate__fadeInDown data-split="words"}
+### [Dividir en letras]{.animate__fadeInDown .animate__faster data-split="letters" data-delay="75" data-container-delay="800"}
+
+``` markdown
+### [Dividir en palabras]{.animate__fadeInDown data-split="words"}
+### [Dividir en letras]{.animate__fadeInDown .animate__faster data-split="letters" data-delay="75" data-container-delay="800"}
+```
+
+## Cambia cuando comienza la aparición {auto-animate=true}
+
+## Cambia cuando comienza la aparición {auto-animate=true data-appearevent="autoanimate"}
+
+Puedes utilizar cualquiera de los siguientes eventos:
+
+* [slidetransitionend (predeterminado, después de la transición)]{.animate__fadeInLeft data-appear-parent="true"}
+* [slidechanged (con la transición)]{.animate__fadeInLeft data-appear-parent="true"}
+* [auto (con la transición, en diapositivas animadas automáticamente)]{.animate__fadeInLeft data-appear-parent="true"}
+
+Esto también se puede configurar por diapositiva con atributos de datos.
+
+
+# Autoappear
+
+Puede simplificar la adición de clases de animación:
+
+##
+A veces (por ejemplo, con Markdown), agregar clases a los elementos es una tarea ardua.
+
+Appearance puede agregar automáticamente clases de animación a elementos específicos (etiquetas u otros selectores) en la presentación (con la opción `autoappear`) o por diapositiva (con `data-autoappear`).
+
+
+## Modo de aparición automática global
+
+* Este es el elemento de lista 1
+* Este es el elemento de lista 2
+
+``` yaml
+format:
+  revealjs:
+    ...
+    appearance:
+      autoappear: true
+      autoelements: '{"ul li": "animate__fadeInLeft"}'
+```
+
+```markdown
+## Modo de aparición automática global
+
+* Este es el elemento de lista 1
+* Este es el elemento de lista 2
+```
+
+Puedes utilizar un objeto JSON simple, o más elaborado como este: `'{"ul li": {"animation": "animate__fadeInLeft", "speed": "slow", "delay": "100"}}'`.
+
+
+## Aparición automática local {data-autoappear=true}
+
+Esto utilizará el objeto JSON de la opción global autoelements, incluso si autoappear es falso.
+
+* Este es el elemento de lista 1
+* Este es el elemento de lista 2
+
+``` yaml
+format:
+  revealjs:
+    ...
+    appearance:
+      autoappear: false
+      autoelements: '{"ul li": "animate__fadeInLeft"}'
+```
+
+```markdown
+## Aparición automática local {data-autoappear=true}
+
+* Este es el elemento de lista 1
+* Este es el elemento de lista 2
+```
+
+
+## Aparición automática local, especificada {data-autoappear="{'ul li':'animate__fadeInRight', 'h2': {'animation':'animate__fadeInDown', 'speed':'slow', 'delay':'100'}}"}
+
+También puede agregar un objeto JSON a `data-autoappear` de la diapositiva, con elementos específicos, sus clases de animación como una cadena o un objeto con clases de animación, velocidad opcional y retraso opcional.
+
+* Este es el elemento de lista 1
+* Este es el elemento de lista 2
+
+```markdown
+## Aparición automática local, especificada {data-autoappear="{'ul li':'animate__fadeInRight', 'h2': {'animation':'animate__fadeInDown', 'speed':'slow', 'delay':'100'}}"}
+
+* Este es el elemento de lista 1
+* Este es el elemento de lista 2
+```
+
+## Aparición automática local, especificada y dividida {data-autoappear="{'h2': {'animation':'animate__fadeInDown', 'speed':'fast', 'delay':'180', 'split':'words', 'container-delay':'500ms'}, 'h3': {'animation':'animate__fadeInDown', 'split':'letters', 'delay':'80'}}"}
+
+Y puedes hacer lo mismo para cualquier animación que quieras tener en las líneas y palabras.
+
+### Appearance
+
+```markdown
+## Aparición automática local, especificada y dividida {data-autoappear="{'h2': {'animation':'animate__fadeInDown', 'speed':'fast', 'delay':'180', 'split':'words', 'container-delay':'500ms'}, 'h3': {'animation':'animate__fadeInDown', 'split':'letters', 'delay':'80'}}"}
+
+### Appearance
+```
+
+# Tercera parte {background-color="#68228B"}
+
+# Ejemplo de un tabset
+
+## Aspirantes y Admitidos
+
+::: panel-tabset
+
+### Aspirantes
+
+<center>
+
+```{r}
+#| warning: false
+#| message: false
+
+# Librerías ----
+library(UnalR)
+library(tidyverse)
+library(readr)
+
+Tabset1 <- read_csv("datos/Tabset1.csv")
+Tabset1 %>%
+  Plot.Series(
+  tiempo    = vars(Periodo),
+  valores   = Total,
+  colores = c("blue"),
+  ylim = c(0, NaN),
+  titulo = "Evolución total de aspirantes a la UNAL",
+  categoria = Poblacion,
+  labelX    = "Periodo",
+  labelY    = "Total aspirantes",
+  libreria = "highcharter",
+  estilo = list(hc.Tema = 5))
+```
+
+</center>
+
+### Nivel
+
+<center>
+
+```{r}
+#| warning: false
+#| message: false
+
+Tabset2 <- read_csv("datos/Tabset2.csv")
+Tabset2 %>%
+Plot.Series(
+  tiempo    = vars(Periodo),
+  valores   = Total,
+  colores = c("#ff7f00", "#377eb8", "#006d2c", "#984ea3",  "#e41a1c"),
+  ylim = c(0, NaN),
+  titulo = "Evolución total de aspirantes a la UNAL por nivel de formación",
+  categoria = NIVEL,
+  labelX    = "Periodo",
+  labelY    = "Total aspirantes",
+  estilo = list(hc.Tema = 5))
+```
+
+</center>
+
+### Sedes
+
+<center>
+
+```{r}
+#| warning: false
+#| message: false
+
+Tabset3 <- read_csv("datos/Tabset3.csv")
+Tabset3 %>%
+Plot.Series(
+  tiempo    = vars(Periodo),
+  valores   = Total,
+  colores = c("#4d4d4d","#1f78b4","#1b7837","#33a02c",
+              "#fb9a99","#e31a1c","#ffff33","#ff7f00",
+              "#cab2d6","#6a3d9a"),
+  ylim = c(0, NaN),
+  titulo = "Evolución total de aspirantes a la UNAL por sedes",
+  categoria = INS_SEDE_NOMBRE,
+  labelX    = "Periodo",
+  labelY    = "Total aspirantes",
+  estilo = list(hc.Tema = 5))
+```
+
+</center>
+
+### Admitidos
+
+<center>
+
+```{r}
+#| warning: false
+#| message: false
+
+Tabset4 <- read_csv("datos/Tabset4.csv")
+Tabset4 %>%
+Plot.Series(
+  tiempo    = vars(Periodo),
+  valores   = Total,
+  colores = c("blue"),
+  ylim = c(0, NaN),
+  titulo = "Evolución total de admitidos en la UNAL",
+  categoria = Poblacion,
+  labelX    = "Periodo",
+  labelY    = "Total admitidos",
+  estilo = list(hc.Tema = 5))
+```
+
+</center>
+:::
+
+# Referencias {auto-animate=true}
+
+# Referencias {auto-animate=true data-appearevent="autoanimate"}
+
+1. Referencia 1
+1. Referencia 2
+1. Referencia 3
+
+# Gracias {background-color="#68228B"}
