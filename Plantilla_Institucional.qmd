@@ -56,7 +56,7 @@ filters:
 
 <h2>Subtítulo</h2>
 
-<h3>Facultad - Departamento - Sede<h3>
+<h4>Facultad - Departamento - Sede<h4>
 
 # Primera parte {background-color="#68228B"}
 

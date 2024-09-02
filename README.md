@@ -10,4 +10,4 @@
 
 De esta manera se cargarán todos los archivos necesarios para empezar a usar la plantilla. Puede editar el archivo `.qmd` para editar el contenido de la presentación usando como referencia el ejemplo que se incluye, e incluso el archivo `style.css` para personalizar la forma de la plantilla si lo desea.
 
-De click [aquí](https://github.com/mjimenalopez24/PlantillaInstitucional) para acceder al repositorio directamente.
+De click [aquí](https://github.com/estadisticaun/PlantillaUNAL) para acceder al repositorio directamente.
